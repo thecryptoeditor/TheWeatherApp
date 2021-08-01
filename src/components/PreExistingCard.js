@@ -1,19 +1,24 @@
 import React from 'react';
 import './common.css'
 
-export const PreExistingCard = () => {
+export const PreExistingCard = (props) => {
+    console.log(props)
     return (
         <div className="container" style={{maxWidth: '820px'}}>
-            <div class="page-content page-container" id="page-content">
-                <div class="card card-weather">
-                    <div class="card-body">
-                        <div class="weather-date-location">
+            <div className="page-content page-container" id="page-content">
+                <div className="card card-weather">
+                    <div className="card-body">
+                        <div className="weather-date-location">
                             <h3>Friday</h3>
-                            <p class="text-gray"> <span class="weather-date">25 March, 2019</span> <span class="weather-location">Sydney, Australia</span> </p>
+                            <p className="text-gray"> <span className="weather-date">25 March, 2019</span> <span className="weather-location">Sydney, Australia</span> </p>
                         </div>
-                        <div class="mr-auto">
-                            <h4 class="display-3">32 <span class="symbol">°</span>C</h4>
-                            <p> Cloudy </p>
+                        <div className="mr-auto">
+                            <h4 
+                            className="display-3">
+                            {props.defaultData === "" ? '' : props.defaultData.current.temp.toFixed(0)}
+                            <span className="symbol">°</span>C</h4>
+                            <p> Cloudiness: {props.defaultData === "" ? '' : props.defaultData.current.clouds}%</p>
+                            <p>Status: {props.defaultData === "" ? '' : props.defaultData.current.weather[0].main}</p>
                         </div>
                     </div>
                 </div>
@@ -21,4 +26,7 @@ export const PreExistingCard = () => {
         </div>
     )  
 }
+
+
+
 

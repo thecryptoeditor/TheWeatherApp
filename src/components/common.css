@@ -18,7 +18,8 @@
 
 .card {
     border: 0;
-    border-radius: 2px
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .card-weather {
@@ -34,8 +35,8 @@
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.5rem
+    /*border: 1px solid rgba(0, 0, 0, 0.125);*/
+    
 }
 
 .card-weather .card-body:first-child {
@@ -91,13 +92,14 @@
   left: 0;
   right: 0;
   margin: 32px auto;
+  justify-content: center;
 }
 
 .search-input {
   width: 100%;
   font-size: 16px;
   padding: 15px 45px 15px 38px;
-  background-color: #eaeaeb;
+  background-color: rgb(223, 239, 247);
   color: #6c6c6c;
   border-radius: 6px;
   border:none;
@@ -134,15 +136,25 @@
   outline:none;
   color:black;
 }
-
+.card-body p {
+    margin: 0px;
+    color: rgb(162, 168, 168);
+    font-style: italic;
+}
 
 /* Daily forcast css start here */
 .carouselInner {
-    background-image: url("../weatherApp_01.jpg");
-    background-repeat: no-repeat, repeat;
+    background-color: rgb(129, 198, 232);
     margin: 40px 0px 100px 0px; 
     height: 300px;
     padding: 40px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     border-radius: 8px;
+}
+
+.daily-forcast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border-right: 1px solid white;*/
 }
