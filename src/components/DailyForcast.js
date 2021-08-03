@@ -1,5 +1,5 @@
 import React from 'react';
-import './common.css'
+import '../Assets/common.css';
 
 export const DailyForcast = () => {
     return (
