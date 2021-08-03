@@ -3,23 +3,23 @@ import '../Assets/common.css'
 
 export const Search = (props) => {
 
-    const [searchData, setSearch] = React.useState({
+    const [searchData, setCityName] = React.useState({
         city: ''
     })
 
-    const searchForm = (evt) => {
+    const searchByCityForm = (evt) => {
         evt.preventDefault();
         props.onSearch(searchData.city)
     }
 
     const searchChange = (evt) => {
-        setSearch({city: evt.target.value})
+        setCityName({city: evt.target.value})
     }
 
     return (
         <div className="container">
             <div className="search-box" style={{margin: '30px auto'}}>
-                <form onSubmit={searchForm}>
+                <form onSubmit={searchByCityForm}>
                     <input 
                         className="search-input" 
                         name="search" 

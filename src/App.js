@@ -22,18 +22,19 @@ export const App = () => {
         defaultSearch(value)
     }
 
+
+    // this useEffect use for to find out lat, lng from the city name
     React.useEffect(() => {
         if(search !== null && search !== undefined) { 
         (async () => {
-        console.log(search)     
             const response = await fetch(`http://api.positionstack.com/v1/forward?access_key=f0f649f70b71f26e55608d63b219b2be&query=${search}`)
             const res = await response.json();
-            console.log(res.data[0].latitude);
-            console.log(res.data[0].longitude);
             setState({lat: res.data[0].latitude, lon: res.data[0].longitude})
         })();
     }}, [search])
-   
+
+
+   // this useEffect use for find out weather related info from open weather APIs
     React.useEffect(() => {
         if(state.lat !== undefined && state.lat !== '') {   
             (async () => {
@@ -49,7 +50,7 @@ export const App = () => {
             <div className="todo">
                 <Header Heading="Your task list here:"/>
                 <Search onSearch={SearchValue}/>
-                <PreExistingCard defaultData={state.defaultCountry === true ? state.weatherData : ""} />
+                { state.defaultCountry === true ? <PreExistingCard defaultData={state.weatherData} /> : ''}
                 <DailyForcast />
                 <Footer />
             </div>

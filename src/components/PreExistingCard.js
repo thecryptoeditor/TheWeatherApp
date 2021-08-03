@@ -20,10 +20,10 @@ export const PreExistingCard = (props) => {
                         <div className="mr-auto">
                             <h4 
                             className="display-3">
-                            {props.defaultData === "" ? '' : props.defaultData.current.temp.toFixed(0)}
+                            {props.defaultData.current.temp.toFixed(0)}
                             <span className="symbol">°</span>C</h4>
-                            <p> Cloudiness: {props.defaultData === "" ? '' : props.defaultData.current.clouds}%</p>
-                            <p>Status: {props.defaultData === "" ? '' : props.defaultData.current.weather[0].main}</p>
+                            <p> Cloudiness: {props.defaultData.current.clouds}%</p>
+                            <p>Status: {props.defaultData.current.weather[0].main}</p>
                         </div>
                     </div>
                 </div>
