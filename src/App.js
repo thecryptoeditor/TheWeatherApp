@@ -3,9 +3,9 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import {Search} from "./components/Search";
 import { PreExistingCard } from "./components/PreExistingCard";
+import { TechNews } from "./components/TechNews";
 import { DailyForcast } from "./components/DailyForcast";
-import { BrowserRouter as Router, // Switch, // Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export const App = () => {
 
@@ -23,7 +23,6 @@ export const App = () => {
         defaultSearch({city: value})
     }
 
-
     // this useEffect use for to find out lat, lng from the city name
     React.useEffect(() => {
         if(search !== null && search !== undefined) { 
@@ -33,7 +32,6 @@ export const App = () => {
             YouComponent(res.data[0].latitude, res.data[0].longitude)
         })();
     }}, [search])
-
 
    // this useEffect use for find out weather related info from open weather APIs
     const YouComponent = (lat, lng) => { 
@@ -51,10 +49,17 @@ export const App = () => {
     return (
         <Router>
             <div className="todo">
-                <Header Heading="Your task list here:"/>
-                <Search onSearch={SearchValue}/>
-                { state.defaultCountry === true ? <PreExistingCard defaultData={state}  /> : <div style={{textAlign:'center'}}>Loading...</div>}
-                <DailyForcast />
+                <Header/>
+                <Switch>
+                    <Route path="/news">
+                        <TechNews />
+                    </Route>
+                    <Route exact path="/">
+                        <Search onSearch={SearchValue}/>
+                        { state.defaultCountry === true ? <PreExistingCard defaultData={state}  /> : <div style={{textAlign:'center'}}>Loading...</div>}
+                        <DailyForcast />
+                    </Route>
+                </Switch>
                 <Footer />
             </div>
         </Router>

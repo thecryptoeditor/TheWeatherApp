@@ -13,7 +13,7 @@ export const Header = (props) => {
 		    	<div className="collapse navbar-collapse justify-content-end" id="navbarScroll">
 		      		<ul className="navbar-nav my-2 my-lg-0 navbar-nav-scroll">
 		        		<li className="nav-item">
-		          			<Link className="nav-link active" aria-current="page" to="/news">Weathter News</Link>
+		          			<Link className="nav-link active" aria-current="page" to="/news">Tech News</Link>
 		        		</li>
 		        		<li className="nav-item">
 		          			<Link className="nav-link active" aria-current="page" to="/info">Contact Us</Link>
