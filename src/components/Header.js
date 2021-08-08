@@ -10,13 +10,13 @@ export const Header = (props) => {
 		      		<span className="navbar-toggler-icon"></span>
 		    	</button>
 
-		    	<div className="collapse navbar-collapse" id="navbarScroll">
-		      		<ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+		    	<div className="collapse navbar-collapse justify-content-end" id="navbarScroll">
+		      		<ul className="navbar-nav my-2 my-lg-0 navbar-nav-scroll">
 		        		<li className="nav-item">
-		          			<Link className="nav-link active" aria-current="page" to="/home">Home</Link>
+		          			<Link className="nav-link active" aria-current="page" to="/news">Weathter News</Link>
 		        		</li>
 		        		<li className="nav-item">
-		          			<Link className="nav-link active" aria-current="page" to="/about">About</Link>
+		          			<Link className="nav-link active" aria-current="page" to="/info">Contact Us</Link>
 		        		</li>
 		      		</ul>
 				</div>

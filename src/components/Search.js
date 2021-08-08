@@ -4,7 +4,7 @@ import '../Assets/common.css'
 export const Search = (props) => {
 
     const [searchData, setCityName] = React.useState({
-        city: ''
+        city: 'Gurgaon'
     })
 
     const searchByCityForm = (evt) => {
