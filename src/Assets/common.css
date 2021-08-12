@@ -194,3 +194,12 @@ ul li a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
+
+
+/*News section CSS start here: */
+
+@media (max-width: 767px) { 
+    .mobile_view_width {
+        width: 100%!important;
+    }
+}
