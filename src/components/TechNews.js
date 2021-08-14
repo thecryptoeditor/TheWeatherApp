@@ -14,9 +14,12 @@ export const TechNews = () => {
     };
 
 	//tech new related API call: 'https://newsapi.org/'
+	// Source: techcrunch
     React.useEffect(() => {
     	articleData();
     }, [])
+
+    console.log(tech)
 
 	return (
 		<div className="text-center mt-20 container">
@@ -35,9 +38,7 @@ export const TechNews = () => {
 					</span>
 					<img style={{margin: "0px 0px 30px 0px", width: "100%"}} alt="tect_img" src={i.urlToImage}/>
 					<p style={{textAlign: "left"}}>{i.description} <a style={{textDecoration: "underline", color: "black", fontStyle: "italic"}} href={i.url}>continue</a></p>
-					<span className="date timeago" title={ i.publishedAt }>
-
-				    </span>
+					<div style={{borderBottom: "2px solid #32a1ce", width: "60%", margin: "auto", opacity: "0.2"}}></div>
 				</div>
 			))}
 		</div>

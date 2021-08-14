@@ -203,3 +203,20 @@ ul li a:hover::after {
         width: 100%!important;
     }
 }
+
+/* Footer styling here: */
+
+.footer_2 {
+    background-color: black;
+    color: white; 
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.hear_img {
+    width: 20px;
+    margin: 0px 6px;
+}
+
+

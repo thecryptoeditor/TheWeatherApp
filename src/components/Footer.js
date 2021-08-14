@@ -1,24 +1,13 @@
 import React from 'react'
 import Icon from '../Assets/heart.png'
+import '../Assets/common.css'
 
 export const Footer = () => {
 	return (
-	  	<div className="text-center p-3 footer" style={footer}>
+	  	<div className="text-center p-3 footer footer_2">
 	    	Made with 
-	    	<img style={heartModification} src={Icon} alt="hear-icon"/>
+	    	<img class="hear_img" src={Icon} alt="hear-icon"/>
 	    	in India - Jatin Agrawal
 	  	</div>
 	)
 }	
-const heartModification = {
-	width: "20px",
-	margin: "0px 6px",
-}
-
-const footer = {
-	backgroundColor: "black",
-	color: "white", 
-	bottom: "0",
-	position: "fixed",
-	width: "100%",
-}
